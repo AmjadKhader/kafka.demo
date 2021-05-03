@@ -1,0 +1,6 @@
+0- move to your kafka folder
+1- Run Zookeeper using the following command: zookeeper-server-start.sh config/zookeeper.properties
+2- Run Kafka server using the following command: kafka-server-start.sh config/server.properties
+3- Create Topic : kafka-topics.sh --bootstrap-server <serverURL:port> --<topicname> --create
+4- Run Producer : kafka-console-producer.sh --bootstrap-server <serverURL:port> --topic <topicname>
+5- Run Consumer : kafka-console-consumer.sh --bootstrap-server <serverURL:port> --topic <topicname>
