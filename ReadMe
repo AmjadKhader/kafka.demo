@@ -4,3 +4,5 @@
 3- Create Topic : kafka-topics.sh --bootstrap-server <serverURL:port> --<topicname> --create
 4- Run Producer : kafka-console-producer.sh --bootstrap-server <serverURL:port> --topic <topicname>
 5- Run Consumer : kafka-console-consumer.sh --bootstrap-server <serverURL:port> --topic <topicname>
+
+**Kafka Documentation: ** https://kafka.apache.org/documentation/#consumerconfigs
