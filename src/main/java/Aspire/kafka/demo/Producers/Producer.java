@@ -1,4 +1,4 @@
-package Aspire.kafka.demo;
+package Aspire.kafka.demo.Producers;
 
 import org.apache.kafka.common.header.Header;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -17,7 +17,7 @@ public class Producer {
     public static void main(String[] args) {
 
         // Create logger for the class ..
-        final Logger logger = LoggerFactory.getLogger(KafkaProperties.Producer.class);
+        Logger logger = LoggerFactory.getLogger(KafkaProperties.Producer.class);
 
         // Create Properties object for producer ..
         Properties properties = new Properties();
@@ -47,7 +47,7 @@ public class Producer {
         headers.add(header);
 
         ProducerRecord<String, String> producerRecord = new ProducerRecord<>
-                ("kafka-topic-demo-1", (Integer)null,"demoKey", "demoValue", headers);
+                ("demo2", (Integer) null, "demoKey", "demoValue", headers);
 
         // Send data
         producer.send(producerRecord, (recordMetadata, exception) -> {
