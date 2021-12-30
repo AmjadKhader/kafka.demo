@@ -1,4 +1,4 @@
-package kafka.demo.Consumers.Stream;
+package kafka.demo.consumers.stream;
 
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.*;
@@ -9,6 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Properties;
+
+import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
 @SpringBootApplication
 public class StreamConsumer {
@@ -29,12 +31,12 @@ public class StreamConsumer {
 
         StreamsBuilder streamsBuilder = new StreamsBuilder();
         KStream<String, String> kStream = streamsBuilder.stream("demo2");
-        kStream.foreach((headers, value) -> System.out.println("key: " + headers + " and value: " + value));
+        kStream.foreach((headers, value) -> log.println("key: " + headers + " and value: " + value));
 
         try (KafkaStreams streams = new KafkaStreams(streamsBuilder.build(), properties)) {
             streams.start();
         } catch (Exception e) {
-            System.out.println(Arrays.toString(e.getStackTrace()));
+            log.println(Arrays.toString(e.getStackTrace()));
         }
     }
 }

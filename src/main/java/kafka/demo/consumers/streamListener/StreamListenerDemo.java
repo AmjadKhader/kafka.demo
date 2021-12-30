@@ -1,4 +1,4 @@
-package kafka.demo.Consumers.StreamListener;
+package kafka.demo.consumers.streamListener;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,13 +8,15 @@ import org.springframework.cloud.stream.messaging.Sink;
 
 import java.util.Collections;
 
+import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
+
 @SpringBootApplication
 @EnableBinding(Sink.class)
 public class StreamListenerDemo {
 
     @StreamListener("input")
     public void consumerMessages(String message) {
-        System.out.println("\n \n \n " + message + "\n \n \n ");
+        log.println("\n \n \n " + message + "\n \n \n ");
     }
 
     public static void main(String[] args) {

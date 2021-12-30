@@ -1,4 +1,4 @@
-package kafka.demo.Producers;
+package kafka.demo.producers;
 
 import org.apache.kafka.common.header.Header;
 import org.apache.kafka.common.serialization.StringSerializer;
