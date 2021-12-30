@@ -1,4 +1,4 @@
-package Aspire.kafka.demo.Consumers.Springboot;
+package kafka.demo.Consumers.Springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

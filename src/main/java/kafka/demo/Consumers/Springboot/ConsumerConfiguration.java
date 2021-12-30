@@ -1,4 +1,4 @@
-package Aspire.kafka.demo.Consumers.Springboot;
+package kafka.demo.Consumers.Springboot;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;

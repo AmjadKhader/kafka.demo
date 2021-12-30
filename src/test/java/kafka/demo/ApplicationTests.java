@@ -1,4 +1,4 @@
-package Aspire.kafka.demo;
+package kafka.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

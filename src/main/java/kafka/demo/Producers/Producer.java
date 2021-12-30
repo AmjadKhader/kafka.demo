@@ -1,4 +1,4 @@
-package Aspire.kafka.demo.Producers;
+package kafka.demo.Producers;
 
 import org.apache.kafka.common.header.Header;
 import org.apache.kafka.common.serialization.StringSerializer;

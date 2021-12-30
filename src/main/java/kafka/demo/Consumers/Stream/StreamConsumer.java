@@ -1,19 +1,8 @@
-package Aspire.kafka.demo.Consumers.Stream;
+package kafka.demo.Consumers.Stream;
 
-import Aspire.kafka.demo.Consumers.Springboot.KafkaConsumerSpringbootApplication;
-import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.common.header.Header;
-import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
-import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.streams.*;
 import org.apache.kafka.streams.kstream.KStream;
-import org.apache.kafka.streams.kstream.Predicate;
-import org.apache.kafka.streams.kstream.Transformer;
-import org.apache.kafka.streams.kstream.TransformerSupplier;
-import org.apache.kafka.streams.kstream.internals.KStreamFlatTransform;
-import org.apache.kafka.streams.processor.Processor;
-import org.apache.kafka.streams.processor.ProcessorContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
